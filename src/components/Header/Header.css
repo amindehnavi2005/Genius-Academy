@@ -1,5 +1,5 @@
 .header {
-    @apply flex border-b-2 py-2.5 px-20 gap-20 justify-between dark:bg-slate-800;
+    @apply flex border-b-2 py-2.5 px-20 gap-20 justify-between dark:bg-slate-800 fixed w-full bg-white ring-blue-950;
 }
 
 .header .right-pane {

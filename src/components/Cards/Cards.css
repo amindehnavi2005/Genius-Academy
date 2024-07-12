@@ -1,0 +1,121 @@
+.cards-container {
+    @apply px-32 py-32;
+}
+
+.cards-container .start-programming-card {
+    @apply py-16 px-16 flex justify-center items-center bg-gradient-to-l from-gray-100 rounded-2xl dark:bg-gradient-to-l dark:from-slate-700;
+}
+
+.cards-container .start-programming-card .discount {
+    @apply flex gap-2 items-center;
+}
+
+.cards-container .start-programming-card .discount .label {
+    @apply flex gap-2 text-gray-100 p-2 rounded-full bg-blue-600;
+    animation: blinking 1.5s linear infinite;
+}
+
+@keyframes blinking {
+    0% {
+        @apply opacity-5
+    }
+
+    47% {
+        @apply opacity-25
+    }
+
+    62% {
+        @apply opacity-50
+    }
+
+    97% {
+        @apply opacity-5
+    }
+
+    100% {
+        @apply opacity-5
+    }
+}
+
+.cards-container .start-programming-card .texts .title {
+    @apply mt-5 font-black lg:text-4xl md:text-2xl dark:text-gray-100;
+}
+
+.cards-container .start-programming-card .texts .subtitle {
+    @apply mt-2.5 text-gray-500 text-nowrap;
+}
+
+.cards-container .start-programming-card .start-learn-btn {
+    @apply flex bg-blue-600 text-gray-100 p-2 rounded-full mt-5 transition-all duration-100 hover:bg-blue-400;
+}
+
+.cards-container .background-landing-page {
+    @apply object-cover lg:block md:hidden;
+}
+
+.cards-container .why-our-academy {
+    @apply mt-16 relative flex flex-col items-center bg-gray-100 rounded-xl dark:bg-gray-700;
+}
+
+.cards-container .why-our-academy .top-label {
+    @apply absolute top-[-15%] border-2 rounded-lg px-8 py-2 bg-white font-black dark:bg-gray-700 dark:text-gray-100;
+}
+
+.cards-container .why-our-academy-list {
+    @apply flex justify-between w-full py-8 px-16;
+}
+
+.cards-container .why-our-academy-list .why-our-academy-item {
+    @apply flex flex-col items-center justify-center font-bold;
+}
+
+.cards-container .why-our-academy-list .why-our-academy-item-1 {
+    @apply text-emerald-400
+}
+
+.cards-container .why-our-academy-list .why-our-academy-item-2 {
+    @apply text-yellow-400
+}
+
+.cards-container .why-our-academy-list .why-our-academy-item-3 {
+    @apply text-blue-400
+}
+
+.cards-container .why-our-academy-list .why-our-academy-item-4 {
+    @apply text-green-400
+}
+
+.cards-container .why-our-academy-list .why-our-academy-item-5 {
+    @apply text-red-400
+}
+
+.cards-container .why-our-academy-list .why-our-academy-item-6 {
+    @apply text-cyan-400
+}
+
+.cards-container .why-our-academy-list .why-our-academy-item svg {
+    @apply bg-white h-16 w-16 p-5 rounded-full mb-2 dark:bg-gray-600;
+    animation: iconSwitch 1s infinite;
+}
+
+@keyframes iconSwitch {
+    0% {
+        @apply opacity-70
+    }
+
+    47% {
+        @apply opacity-50
+    }
+
+    62% {
+        @apply opacity-60
+    }
+
+    97% {
+        @apply opacity-70
+    }
+
+    100% {
+        @apply opacity-70
+    }
+}
