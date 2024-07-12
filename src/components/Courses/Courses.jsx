@@ -27,7 +27,9 @@ function Courses() {
                 </button>
             </header>
             <main className="courses-list">
-                <Course/>
+                <Course />
+                <Course />
+                <Course />
             </main>
         </section>
     )

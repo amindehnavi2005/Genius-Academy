@@ -28,7 +28,7 @@
 }
 
 .courses-container .courses-list {
-    @apply mt-5 grid grid-cols-3;
+    @apply mt-5 grid lg:grid-cols-3 md:grid-cols-2 gap-5;
 }
 
 .courses-container .courses-list .course-item .img {
@@ -40,15 +40,15 @@
 }
 
 .courses-container .courses-list .course-item .img img {
-    @apply rounded-t-xl
+    @apply rounded-t-xl;
 }
 
 .courses-container .courses-list .course-item .course-details {
-    @apply bg-gray-100 rounded-b-xl p-2
+    @apply bg-gray-100 rounded-b-xl p-2 dark:bg-slate-800 dark:text-gray-100;
 }
 
 .courses-container .courses-list .course-item .course-details .course-status {
-    @apply flex text-emerald-400
+    @apply flex text-emerald-400 gap-2;
 }
 
 .courses-container .courses-list .course-item .course-information {
@@ -57,9 +57,23 @@
 
 .courses-container .courses-list .course-item .course-information .season,
 .courses-container .courses-list .course-item .course-information .time {
-    @apply flex gap-2 text-gray-700 my-5 text-xs items-center;
+    @apply flex gap-2 text-gray-700 my-5 text-xs items-center dark:text-blue-400;
+}
+
+.courses-container .courses-list .course-item .course-information .season svg,
+.courses-container .courses-list .course-item .course-information .time svg {
+    @apply h-4;
 }
 
 .courses-container .courses-list .course-item .teacher-details {
-    @apply flex justify-between;
+    @apply flex justify-between items-center;
+}
+
+.courses-container .courses-list .course-item .teacher-details img {
+    @apply rounded-full h-8;
+}
+
+.courses-container .courses-list .course-item .teacher-details .teacher-name,
+.courses-container .courses-list .course-item .course-price p span {
+    @apply text-xs;
 }

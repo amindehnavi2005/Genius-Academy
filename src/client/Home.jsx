@@ -9,7 +9,7 @@ function Home() {
         <main>
             <Header />
             <Cards />
-            <Courses/>
+            <Courses />
         </main>
     );
 }
