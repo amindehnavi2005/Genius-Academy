@@ -1,9 +1,9 @@
 .cards-container {
-    @apply px-32 py-32;
+    @apply px-32 pt-32;
 }
 
 .cards-container .start-programming-card {
-    @apply py-16 px-16 flex justify-center items-center bg-gradient-to-l from-gray-100 rounded-2xl dark:bg-gradient-to-l dark:from-slate-700;
+    @apply py-16 px-16 flex justify-center items-center bg-gradient-to-l from-gray-100 rounded-2xl dark:bg-gradient-to-l dark:from-slate-800;
 }
 
 .cards-container .start-programming-card .discount {
@@ -54,11 +54,11 @@
 }
 
 .cards-container .why-our-academy {
-    @apply mt-16 relative flex flex-col items-center bg-gray-100 rounded-xl dark:bg-gray-700;
+    @apply mt-16 relative flex flex-col items-center bg-gray-100 rounded-xl dark:bg-gray-800;
 }
 
 .cards-container .why-our-academy .top-label {
-    @apply absolute top-[-15%] border-2 rounded-lg px-8 py-2 bg-white font-black dark:bg-gray-700 dark:text-gray-100;
+    @apply absolute top-[-15%] border-2 rounded-lg px-8 py-2 bg-white font-black dark:bg-gray-800 dark:text-gray-100;
 }
 
 .cards-container .why-our-academy-list {
@@ -94,7 +94,7 @@
 }
 
 .cards-container .why-our-academy-list .why-our-academy-item svg {
-    @apply bg-white h-16 w-16 p-5 rounded-full mb-2 dark:bg-gray-600;
+    @apply bg-white h-16 w-16 p-5 rounded-full mb-2 dark:bg-gray-700;
     animation: iconSwitch 1s infinite;
 }
 
