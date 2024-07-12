@@ -3,7 +3,7 @@
 }
 
 .header .right-pane {
-    @apply flex justify-between gap-20;
+    @apply flex justify-between items-center gap-20;
 }
 
 .header .right-pane .logo-container {

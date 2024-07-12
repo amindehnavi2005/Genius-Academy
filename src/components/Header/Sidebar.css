@@ -1,0 +1,31 @@
+.sidebar-btn {
+    @apply flex items-center justify-center bg-slate-100 h-10 w-10 rounded-full dark:bg-slate-700 dark:text-gray-100 md:flex lg:hidden;
+}
+
+.sidebar {
+    @apply h-full bg-gray-50 dark:bg-slate-900 dark:text-gray-100 p-5;
+}
+
+.sidebar .sidebar-header {
+    @apply border-b-2 mx-5;
+}
+
+.sidebar .sidebar-header .sidebar-topbar {
+    @apply flex items-start justify-between w-60;
+}
+
+.sidebar .sidebar-header .sidebar-topbar .sidebar-close {
+    @apply cursor-pointer dark:text-gray-100;
+}
+
+.sidebar .sidebar-header .sidebar-search-input {
+    @apply flex justify-center items-center bg-slate-100 w-full p-2 rounded-lg my-5;
+}
+
+.sidebar .sidebar-change-theme {
+    @apply flex justify-between font-bold mx-5 p-5 items-center text-gray-400 border-b-2;
+}
+
+.sidebar .sidebar-course-grouping {
+    @apply flex justify-between p-5 border-b-2 mx-5 dark:text-gray-100 cursor-pointer;
+}
