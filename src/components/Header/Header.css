@@ -1,0 +1,39 @@
+.header {
+    @apply flex border-b-2 py-2.5 px-20 gap-20 justify-between dark:bg-slate-800;
+}
+
+.header .right-pane {
+    @apply flex justify-between gap-20;
+}
+
+.header .right-pane .logo-container {
+    @apply flex items-center gap-4 cursor-pointer dark:text-gray-300;
+}
+
+.header .right-pane .nav-bar {
+    @apply flex gap-10 items-center mobile:hidden lg:flex dark:text-gray-300;
+}
+
+.header .right-pane .nav-bar .nav-item {
+    @apply flex cursor-pointer hover:text-blue-600 transition-all ease-linear duration-200;
+}
+
+.header .left-pane {
+    @apply flex items-center gap-5 dark:text-gray-300;
+}
+
+.header .left-pane .icon-btn {
+    @apply bg-slate-100 p-2 rounded-full mobile:hidden lg:block dark:bg-slate-700;
+}
+
+.header .left-pane .profile {
+    @apply flex gap-5 items-center cursor-pointer;
+}
+
+.header .left-pane .profile .icon-btn {
+    @apply mobile:block;
+}
+
+.header .left-pane .profile .profile-details {
+    @apply mobile:hidden sm:block;
+}
