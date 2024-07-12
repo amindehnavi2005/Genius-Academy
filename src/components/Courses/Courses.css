@@ -50,3 +50,16 @@
 .courses-container .courses-list .course-item .course-details .course-status {
     @apply flex text-emerald-400
 }
+
+.courses-container .courses-list .course-item .course-information {
+    @apply flex gap-10;
+}
+
+.courses-container .courses-list .course-item .course-information .season,
+.courses-container .courses-list .course-item .course-information .time {
+    @apply flex gap-2 text-gray-700 my-5 text-xs items-center;
+}
+
+.courses-container .courses-list .course-item .teacher-details {
+    @apply flex justify-between;
+}
