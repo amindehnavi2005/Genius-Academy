@@ -6,29 +6,13 @@
     @apply flex justify-between p-5 bg-gradient-to-l from-gray-100 rounded-xl dark:from-slate-800;
 }
 
-.courses-container .courses-header .details {
-    @apply flex gap-5;
-}
-
-.courses-container .courses-header .details .icon {
-    @apply flex bg-blue-600 h-12 w-12 rounded-full justify-center items-center text-green-100;
-}
-
-.courses-container .courses-header .details .texts .title {
-    @apply text-blue-600 font-black text-xl;
-}
-
-.courses-container .courses-header .details .texts .subtitle {
-    @apply font-medium dark:text-gray-100;
-}
-
 
 .courses-container .courses-header .show-all-courses-btn {
     @apply flex transition-all duration-300 hover:text-blue-600 bg-gray-100 dark:bg-slate-800 dark:text-gray-100 items-center p-2 px-4 rounded-full font-medium;
 }
 
 .courses-container .courses-list {
-    @apply mt-5 grid lg:grid-cols-3 md:grid-cols-2 gap-5;
+    @apply mt-5 grid lg:grid-cols-3 md:grid-cols-2 gap-8;
 }
 
 .courses-container .courses-list .course-item .img {
@@ -37,6 +21,29 @@
 
 .courses-container .courses-list .course-item .img .img-label {
     @apply absolute top-0 text-gray-100 flex m-5 left-0 p-2 bg-slate-950 opacity-85 rounded-full;
+    animation: labelFlashing 2s infinite;
+}
+
+@keyframes labelFlashing {
+    0% {
+        @apply opacity-70
+    }
+
+    47% {
+        @apply opacity-50
+    }
+
+    62% {
+        @apply opacity-60
+    }
+
+    97% {
+        @apply opacity-70
+    }
+
+    100% {
+        @apply opacity-70
+    }
 }
 
 .courses-container .courses-list .course-item .img img {

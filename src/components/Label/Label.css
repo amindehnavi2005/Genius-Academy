@@ -1,0 +1,15 @@
+.details {
+    @apply flex gap-5;
+}
+
+.details .icon {
+    @apply flex bg-blue-600 h-12 w-12 rounded-full justify-center items-center text-green-100;
+}
+
+.details .texts .title {
+    @apply text-blue-600 font-black text-xl;
+}
+
+.details .texts .subtitle {
+    @apply font-medium dark:text-gray-100;
+}
