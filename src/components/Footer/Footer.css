@@ -15,7 +15,43 @@
 }
 
 .footer .topbar .back-to-up-btn {
-    @apply flex gap-2 mb-10 absolute top-[-25%] left-0 transition-all duration-300 hover:text-blue-600 bg-gray-100 dark:bg-slate-800 dark:text-gray-100 items-center p-2 px-4 rounded-full font-medium;
+    @apply flex gap-2 mb-10 absolute top-[-20%] left-[-5%] transition-all duration-300 hover:text-blue-600 bg-gray-100 dark:bg-slate-800 dark:text-gray-100 items-center p-2 px-4 rounded-full font-medium;
 }
 
-.footer .bottombar {}
+.footer .bottombar {
+    @apply flex md:flex-col lg:flex-row justify-between items-center;
+}
+
+.footer .bottombar .about-academy-card {
+    @apply bg-gray-100 p-5 lg:w-[50%] md:w-full rounded-xl transition-all duration-150 ease-linear dark:bg-slate-800;
+}
+
+.footer .bottombar .about-academy-card .title,
+.footer .bottombar .useful-links .title,
+.footer .bottombar .social-networks-container .title {
+    @apply font-black text-lg mb-2 dark:text-gray-100;
+}
+
+.footer .bottombar .about-academy-card .subtitle {
+    @apply text-slate-500
+}
+
+.footer .bottombar .useful-links {
+    @apply md:my-10;
+}
+
+.footer .bottombar .useful-links a {
+    @apply text-slate-500 hover:text-blue-600 transition-all duration-150;
+}
+
+.footer .bottombar .social-networks-list {
+    @apply flex justify-between gap-2;
+}
+
+.footer .bottombar .social-networks-list .social-network {
+    @apply h-[50%] w-[50%] flex justify-center items-center bg-gray-100 dark:bg-slate-700 p-2 rounded-full;
+}
+
+.footer .bottombar .social-networks-list .social-network a svg {
+    @apply hover:text-blue-600 transition-all duration-150 dark:text-gray-100;
+}
