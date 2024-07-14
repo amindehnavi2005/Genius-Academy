@@ -1,0 +1,21 @@
+.footer {
+    @apply mx-32 py-16;
+}
+
+.footer .topbar {
+    @apply relative border-t-2;
+}
+
+.footer .footer-head {
+    @apply flex justify-between my-12 lg:w-[60%] md:w-full;
+}
+
+.footer .footer-head .icons {
+    @apply flex gap-8;
+}
+
+.footer .topbar .back-to-up-btn {
+    @apply flex gap-2 mb-10 absolute top-[-25%] left-0 transition-all duration-300 hover:text-blue-600 bg-gray-100 dark:bg-slate-800 dark:text-gray-100 items-center p-2 px-4 rounded-full font-medium;
+}
+
+.footer .bottombar {}
