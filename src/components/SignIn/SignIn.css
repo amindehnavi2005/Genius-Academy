@@ -1,0 +1,31 @@
+.sign-in-container {
+    @apply flex justify-between h-[100vh] w-full;
+}
+
+.sign-in-container .welcome-pane {
+    @apply flex flex-col items-center justify-center bg-blue-600 h-full text-gray-100 font-black lg:text-7xl md:text-4xl text-center p-16 gap-10 w-[40%];
+}
+
+.sign-in-container .sign-in-pane {
+    @apply flex flex-col justify-center w-[60%] items-center;
+}
+
+.sign-in-container .sign-in-pane .inputs-container {
+    @apply flex flex-col justify-center items-center gap-8 py-16 px-5 border-2 h-[50%] w-[50%] rounded-xl bg-gray-100 dark:bg-slate-800;
+}
+
+.sign-in-container .sign-in-pane .inputs-container .input {
+    @apply px-5 py-2 rounded-xl dark:bg-slate-600
+}
+
+.sign-in-container .sign-in-pane .inputs-container p {
+    @apply dark:text-gray-400;
+}
+
+.sign-in-container .sign-in-pane .inputs-container .go-to-sign-in {
+    @apply text-blue-600 font-bold cursor-pointer hover:text-blue-400 transition-all duration-150;
+}
+
+.sign-in-container .sign-in-pane .inputs-container .sign-in-btn {
+    @apply bg-blue-600 px-24 py-2 rounded-full text-gray-100 font-black hover:bg-blue-400 transition-all duration-150;
+}

@@ -1,0 +1,81 @@
+.course-item .img {
+    @apply relative;
+}
+
+.course-item .img .img-label {
+    @apply absolute top-0 text-gray-100 flex m-5 left-0 p-2 bg-slate-950 opacity-85 rounded-full;
+    animation: labelFlashing 2s infinite;
+}
+
+@keyframes labelFlashing {
+    0% {
+        @apply opacity-70
+    }
+
+    47% {
+        @apply opacity-50
+    }
+
+    62% {
+        @apply opacity-60
+    }
+
+    97% {
+        @apply opacity-70
+    }
+
+    100% {
+        @apply opacity-70
+    }
+}
+
+.course-item .img img {
+    @apply rounded-t-xl;
+}
+
+.course-item .course-details {
+    @apply bg-gray-100 rounded-b-xl p-2 dark:bg-slate-800 dark:text-gray-100;
+}
+
+.course-item .course-details .course-status {
+    @apply flex text-emerald-400 gap-2;
+}
+
+.course-item .course-information {
+    @apply flex gap-10;
+}
+
+.course-item .course-information .season,
+.course-item .course-information .time {
+    @apply flex gap-2 text-gray-700 my-5 text-xs items-center dark:text-blue-400;
+}
+
+.course-item .course-information .season svg,
+.course-item .course-information .time svg {
+    @apply h-4;
+}
+
+.course-item .teacher-details {
+    @apply flex justify-between items-center;
+}
+
+.course-item .teacher-details img {
+    @apply rounded-full h-8;
+}
+
+.course-item .teacher-details .teacher-name,
+.course-item .course-price p span {
+    @apply text-xs;
+}
+
+.course-item .course-details .show-course {
+    @apply flex my-5 justify-around;
+}
+
+.course-item .course-details .show-course .show-course-btn {
+    @apply flex items-center bg-blue-600 p-2 px-8 rounded-full text-gray-100 gap-2 transition-all duration-150 hover:bg-blue-400;
+}
+
+.course-item .course-details .add-to-favorite-course-btn {
+    @apply bg-gray-200 rounded-full p-3 text-gray-400 hover:text-red-400 transition-all duration-200 dark:bg-slate-900;
+}
