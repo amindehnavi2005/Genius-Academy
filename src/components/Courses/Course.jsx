@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Course.css"
 
-function Course({ }) {
+function Course() {
     return (
         <section className='course-item'>
             <section className="img">

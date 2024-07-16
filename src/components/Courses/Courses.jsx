@@ -1,15 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./Courses.css"
 import Course from './Course'
 import Label from '../Label/Label'
 
 function Courses() {
 
-    // const courses = fetch("http://localhost:3000/courses", {
-    //     method: "GET",
-    // }).then(
-    //     (response) => console.log("Response : ", response.body)
-    // );
+    let courseList;
+    useEffect(() => {
+        fetch("http://localhost:3000/courses",
+            { method: "GET", },
+        ).then(
+            (response) => response.json()
+        ).then(
+            data => {
+                courseList = data;
+            }
+        );
+    }, []);
+
+    console.log("Course List : " + courseList);
 
     return (
         <section className="courses-container">
@@ -30,9 +39,7 @@ function Courses() {
                 </button>
             </header>
             <main className="courses-list">
-                <Course />
-                <Course />
-                <Course />
+                {/* {courseList.map((course) => <Course label={"فرانت اند"} />)} */}
             </main>
         </section>
     )
