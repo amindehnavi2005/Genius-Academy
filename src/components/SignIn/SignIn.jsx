@@ -51,15 +51,26 @@ function SignIn() {
             (response) => response.json()
         ).then(
             array => {
-                let newData = array.filter((data) => {
-                    return data.userEmail == userEmail;
+                array.filter((data) => {
+                    if (data.userEmail == userEmail) {
+                        localStorage.setItem("userInfo", JSON.stringify(data));
+                        localStorage.setItem("isSignIn", true);
+                    } else {
+                        return alert("مشکلی به وجود آمده است")
+                    }
                 });
-                if (localStorage.getItem("userInfo")) {
-                    localStorage.setItem("userInfo", JSON.stringify(newData));
-                } else {
-                    localStorage.setItem("userInfo", JSON.stringify(newData));
-                }
-                localStorage.setItem("isSignIn", true);
+                // console.log("New Data : " + newData);
+                // if (newData) {
+                //     if (localStorage.getItem("userInfo")) {
+                //         localStorage.setItem("userInfo", JSON.stringify(newData));
+                //     } else {
+                //         localStorage.setItem("userInfo", JSON.stringify(newData));
+                //     }
+                //     localStorage.setItem("isSignIn", true);
+                // } else {
+                //     alert("مشکلی به وجود آمده است.");
+                // }
+
             }
         )
 
