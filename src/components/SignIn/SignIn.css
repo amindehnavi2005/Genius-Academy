@@ -15,7 +15,7 @@
 }
 
 .sign-in-container .sign-in-pane .inputs-container .input {
-    @apply px-5 py-2 rounded-xl dark:bg-slate-600
+    @apply px-5 py-2 rounded-xl dark:bg-slate-600 dark:text-gray-100;
 }
 
 .sign-in-container .sign-in-pane .inputs-container p {

@@ -4,14 +4,13 @@ import useDarkSide from '../../data/useDarkSide';
 import ThemeSwitcher from '../ThemeSwitcher';
 import Sidebar from './Sidebar';
 import LogoContainer from '../LogoContainer';
-import useSignIn from '../../data/useSignIn';
 import { Link } from 'react-router-dom';
 
 function Header() {
     const [colorTheme, setTheme] = useDarkSide();
-    const [isSignIn, changeSignInStatus] = useSignIn();
     const [showProfileMenu, setShowProfileMenu] = useState(false);
-    console.log(isSignIn);
+    const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+    const isSignIn = localStorage.getItem("isSignIn");
 
     return (
         <header className='header'>
@@ -55,10 +54,16 @@ function Header() {
                             </svg>
                         </button>
                     </section>
-                    <section className="profile-details">
-                        <p>امین دهنوی</p>
-                        <p className='text-slate-500'>خوش آمدید</p>
-                    </section>
+                    {isSignIn ? (
+                        <section className="profile-details">
+                            <p>امین دهنوی</p>
+                            <p className='text-slate-500'>خوش آمدید</p>
+                        </section>
+                    ) : (
+                        <section className="profile-details">
+                            <p>کاربر مهمان</p>
+                        </section>
+                    )}
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                         <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd" />
                     </svg>
@@ -82,12 +87,12 @@ function Header() {
                                     </a>
                                 </li>
                                 <li className="profile-menu-item exit">
-                                    <a href="#">
+                                    <button>
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
                                         </svg>
                                         <p>خروج از حساب</p>
-                                    </a>
+                                    </button>
                                 </li>
                             </ul>
                         )
