@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Header.css"
 import useDarkSide from '../../data/useDarkSide';
 import ThemeSwitcher from '../ThemeSwitcher';
@@ -10,7 +10,11 @@ function Header() {
     const [colorTheme, setTheme] = useDarkSide();
     const [showProfileMenu, setShowProfileMenu] = useState(false);
     const userInfo = JSON.parse(localStorage.getItem("userInfo"));
-    const isSignIn = localStorage.getItem("isSignIn");
+    const isSignIn = JSON.parse(localStorage.getItem("isSignIn"));
+
+    useEffect(() => {
+        console.log(userInfo + " " + isSignIn);
+    }, [userInfo, isSignIn]);
 
     return (
         <header className='header'>
@@ -56,7 +60,7 @@ function Header() {
                     </section>
                     {isSignIn ? (
                         <section className="profile-details">
-                            <p>امین دهنوی</p>
+                            <p>{userInfo.username}</p>
                             <p className='text-slate-500'>خوش آمدید</p>
                         </section>
                     ) : (
@@ -68,7 +72,7 @@ function Header() {
                         <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd" />
                     </svg>
                     {
-                        isSignIn && showProfileMenu ? (
+                        showProfileMenu ? isSignIn == true ? (
                             <ul className="profile-menu">
                                 <li className="profile-menu-item">
                                     <a href="#">
@@ -87,7 +91,10 @@ function Header() {
                                     </a>
                                 </li>
                                 <li className="profile-menu-item exit">
-                                    <button>
+                                    <button onClick={() => {
+                                        localStorage.removeItem("userInfo");
+                                        localStorage.setItem("isSignIn", false);
+                                    }}>
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
                                         </svg>
@@ -96,7 +103,7 @@ function Header() {
                                 </li>
                             </ul>
                         )
-                            : isSignIn == false && showProfileMenu ? (
+                            : isSignIn == false ? (
                                 <ul className="profile-menu">
                                     <li className="profile-menu-item">
                                         <Link to={"/sign-in"}>
@@ -107,8 +114,7 @@ function Header() {
                                         </Link>
                                     </li>
                                 </ul>
-                            )
-                                : null
+                            ) : null : null
                     }
                 </section>
             </section>

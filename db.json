@@ -13,13 +13,62 @@
       "userPassword": "123456789"
     },
     {
-      "id": "cc56",
+      "id": "499f",
       "username": "امین دهنوی",
       "userEmail": "amin1384dehnavi@gmail.com",
       "userPassword": "a09013260388"
     }
   ],
-  "courses" : {
-    
-  }
+  "courses": [
+    {
+      "id": "1",
+      "courseImg": "/public/course01.jpg",
+      "courseName": "دوره پروژه محور React و Next",
+      "courseTag": "فرانت اند",
+      "courseSeasonCount": 5,
+      "courseTime": 25,
+      "courseTeacher": "جلال بهرامی راد",
+      "coursePrice": "1,079,000"
+    },
+    {
+      "id": "2",
+      "courseImg": "/public/course02.webp",
+      "courseName": "دوره پروژه محور React",
+      "courseTag": "فرانت اند",
+      "courseSeasonCount": 5,
+      "courseTime": 25,
+      "courseTeacher": "جلال بهرامی راد",
+      "coursePrice": "1,079,000"
+    },
+    {
+      "id": "3",
+      "courseImg": "/public/course01.jpg",
+      "courseName": "دوره پروژه محور React و Next",
+      "courseTag": "فرانت اند",
+      "courseSeasonCount": 5,
+      "courseTime": 25,
+      "courseTeacher": "جلال بهرامی راد",
+      "coursePrice": "1,079,000"
+    },
+    {
+      "id": "4",
+      "courseImg": "/public/course01.jpg",
+      "courseName": "دوره پروژه محور React و Next",
+      "courseTag": "فرانت اند",
+      "courseSeasonCount": 5,
+      "courseTime": 25,
+      "courseTeacher": "جلال بهرامی راد",
+      "coursePrice": "1,079,000"
+    },
+    {
+      "id": "5",
+      "courseImg": "/public/course01.jpg",
+      "courseName": "دوره پروژه محور React و Next",
+      "courseTag": "فرانت اند",
+      "courseSeasonCount": 5,
+      "courseTime": 25,
+      "courseTeacher": "جلال بهرامی راد",
+      "coursePrice": "1,079,000"
+    }
+  ]
 }

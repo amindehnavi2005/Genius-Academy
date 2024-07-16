@@ -37,6 +37,31 @@ function SignIn() {
                 }
             }
         );
+    }
+
+    const userLogin = () => {
+        let userInfo = {
+            userEmail,
+            userPassword,
+        };
+
+        fetch("http://localhost:3000/users", {
+            method: "GET",
+        }).then(
+            (response) => response.json()
+        ).then(
+            array => {
+                let newData = array.filter((data) => {
+                    return data.userEmail == userEmail;
+                });
+                if (localStorage.getItem("userInfo")) {
+                    localStorage.setItem("userInfo", JSON.stringify(newData));
+                } else {
+                    localStorage.setItem("userInfo", JSON.stringify(newData));
+                }
+                localStorage.setItem("isSignIn", true);
+            }
+        )
 
     }
 
@@ -67,7 +92,7 @@ function SignIn() {
                     }
                     {
                         pageStatus ? (
-                            <button className="sign-in-btn">
+                            <button className="sign-in-btn" onClick={userLogin}>
                                 ورود
                             </button>
                         )

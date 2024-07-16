@@ -4,6 +4,13 @@ import Course from './Course'
 import Label from '../Label/Label'
 
 function Courses() {
+
+    // const courses = fetch("http://localhost:3000/courses", {
+    //     method: "GET",
+    // }).then(
+    //     (response) => console.log("Response : ", response.body)
+    // );
+
     return (
         <section className="courses-container">
             <header className="courses-header">
