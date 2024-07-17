@@ -14,7 +14,10 @@ function Courses() {
         ).then(
             (response) => response.json()
         ).then(
-            data => setDatas(data)
+            data => {
+                setDatas(data);
+                localStorage.setItem("courses", JSON.stringify(data))
+            }
         );
     }, []);
 
@@ -42,6 +45,7 @@ function Courses() {
                 {
                     datas.map(
                         (data) => <Course
+                            id={data.id}
                             img={data.courseImg}
                             status={data}
                             name={data.courseName}

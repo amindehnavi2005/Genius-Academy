@@ -1,0 +1,39 @@
+.course-container .course-details {
+    @apply p-32 w-full;
+}
+
+.course-container .course-details>img {
+    @apply rounded-xl w-full;
+}
+
+.course-container .course-details .course-status {
+    @apply flex my-5 gap-2 text-green-500;
+}
+
+.course-container .course-details .course-name {
+    @apply font-bold lg:text-4xl md:text-2xl;
+}
+
+.course-container .course-details .course-details-cards {
+    @apply flex justify-between my-12 gap-3;
+}
+
+.course-container .course-details .course-details-cards .course-details-card {
+    @apply flex flex-col items-center bg-gray-100 px-[10%] py-[3%] rounded-2xl gap-2;
+}
+
+.course-container .course-details .course-details-cards .course-details-card .icon {
+    @apply bg-white p-2 rounded-full text-blue-600
+}
+
+.course-container .course-details .course-details-cards .course-details-card .title {
+    @apply text-gray-500 font-medium
+}
+
+.course-container .course-details .course-details-cards .course-details-card .count {
+    @apply font-bold;
+}
+
+.course-container .course-details .headlines-title {
+    @apply flex gap-2 text-xl font-black;
+}
