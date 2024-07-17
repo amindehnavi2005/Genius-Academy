@@ -69,10 +69,31 @@ function Course() {
                         سرفصل ها
                     </p>
                     {newData[0].courseHeadlines.map((headlines) => (
-                        <button className='headlines-dropdown'>
-                            <span>{headlines.headlinesId}</span>
-                            <span>{headlines.headlinesName}</span>
-                        </button>
+                        <>
+                            <button className='headlines-dropdown'>
+                                <section className='headline-details'>
+                                    <p>{headlines.headlineId}</p>
+                                    <p>{headlines.headlineName}</p>
+                                </section>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </button>
+                            <section className="headline-parts">
+                                {headlines.headlineParts.map((part) => (
+                                    <section className="part-container">
+                                        <section className="part-details">
+                                            <p>{part.partId}</p>
+                                            <p>{part.partName}</p>
+                                        </section>
+                                        <section className="part-time">
+                                            <p>{part.partTime}</p>
+                                            <p>{part.partName}</p>
+                                        </section>
+                                    </section>
+                                ))}
+                            </section>
+                        </>
                     ))}
                 </section>
             </section>

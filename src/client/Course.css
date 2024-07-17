@@ -37,3 +37,21 @@
 .course-container .course-details .headlines-title {
     @apply flex gap-2 text-xl font-black;
 }
+
+.course-container .course-details .headlines .headlines-dropdown {
+    @apply w-full flex bg-gray-100 gap-5 my-10 p-5 rounded-xl justify-between;
+}
+
+.course-container .course-details .headlines .headlines-dropdown .headline-details {
+    @apply flex gap-5;
+}
+
+.course-container .course-details .headlines .headline-parts .part-container,
+.course-container .course-details .headlines .headline-parts .part-container .part-details,
+.course-container .course-details .headlines .headline-parts .part-container .part-time {
+    @apply flex gap-5;
+}
+
+.course-container .course-details .headlines .headline-parts .part-container {
+    @apply justify-between
+}
