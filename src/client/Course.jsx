@@ -7,7 +7,6 @@ import CourseDetailsCard from '../components/Courses/CourseDetailsCard';
 function Course() {
 
     const id = useParams();
-    console.log(id.id);
     let [datas, setDatas] = useState([]);
     datas = JSON.parse(localStorage.getItem("courses"));
     const newData = datas.filter((data) => {
@@ -50,7 +49,7 @@ function Course() {
                             </svg>
                         }
                         title={"تعداد فصل ها"}
-                        count={newData[0].courseSeasonCount}
+                        count={newData[0].courseHeadlines.length}
                     />
                     <CourseDetailsCard
                         icon={
@@ -69,7 +68,12 @@ function Course() {
                         </svg>
                         سرفصل ها
                     </p>
-                    {newData[0].courseSeasonCount.lenght}
+                    {newData[0].courseHeadlines.map((headlines) => (
+                        <button className='headlines-dropdown'>
+                            <span>{headlines.headlinesId}</span>
+                            <span>{headlines.headlinesName}</span>
+                        </button>
+                    ))}
                 </section>
             </section>
         </main>

@@ -26,7 +26,16 @@
       "courseStatus": true,
       "courseName": "دوره پروژه محور React و Next",
       "courseTag": "فرانت اند",
-      "courseSeasonCount": 5,
+      "courseHeadlines": [
+        {
+          "headlineId": 1,
+          "headlineName": "معرفی"
+        },
+        {
+          "headlineId": 2,
+          "headlineName": "مفاهیم ابتدایی پروژه"
+        }
+      ],
       "courseTime": 25,
       "courseTeacher": "جلال بهرامی راد",
       "coursePrice": "1,079,000",
@@ -38,7 +47,16 @@
       "courseStatus": true,
       "courseName": "دوره پروژه محور React",
       "courseTag": "فرانت اند",
-      "courseSeasonCount": 26,
+      "courseHeadlines": [
+        {
+          "headlineId": 1,
+          "headlineName": "معرفی"
+        },
+        {
+          "headlineId": 2,
+          "headlineName": "مفاهیم ابتدایی پروژه"
+        }
+      ],
       "courseTime": 99,
       "courseTeacher": "محمد امین سعیدی راد",
       "coursePrice": "4,000,000",
@@ -50,7 +68,16 @@
       "courseStatus": true,
       "courseName": "آموزش جنگو به صورت پروژه محور",
       "courseTag": "بک اند",
-      "courseSeasonCount": 16,
+      "courseHeadlines": [
+        {
+          "headlineId": 1,
+          "headlineName": "معرفی"
+        },
+        {
+          "headlineId": 2,
+          "headlineName": "مفاهیم ابتدایی پروژه"
+        }
+      ],
       "courseTime": 47,
       "courseTeacher": "رضا دولتی",
       "coursePrice": "1,750,000",
@@ -62,7 +89,16 @@
       "courseStatus": true,
       "courseName": "آموزش پایتون رایگان مقدماتی تا پیشرفته",
       "courseTag": "بک اند",
-      "courseSeasonCount": 10,
+      "courseHeadlines": [
+        {
+          "headlineId": 1,
+          "headlineName": "معرفی"
+        },
+        {
+          "headlineId": 2,
+          "headlineName": "مفاهیم ابتدایی پروژه"
+        }
+      ],
       "courseTime": 77,
       "courseTeacher": "رضا دولتی",
       "coursePrice": "0",
@@ -74,7 +110,16 @@
       "courseStatus": true,
       "courseName": "پیاده سازی داشبورد های حرفه ای با CSS و JS",
       "courseTag": "فرانت اند",
-      "courseSeasonCount": 10,
+      "courseHeadlines": [
+        {
+          "headlineId": 1,
+          "headlineName": "معرفی"
+        },
+        {
+          "headlineId": 2,
+          "headlineName": "مفاهیم ابتدایی پروژه"
+        }
+      ],
       "courseTime": 21,
       "courseTeacher": "مهرشاد براتی",
       "coursePrice": "700,000",

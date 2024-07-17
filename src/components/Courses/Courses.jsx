@@ -50,7 +50,7 @@ function Courses() {
                             status={data}
                             name={data.courseName}
                             tag={data.courseTag}
-                            seasonCount={data.courseSeasonCount}
+                            seasonCount={data.courseHeadlines.length}
                             time={data.courseTime}
                             teacher={data.courseTeacher}
                             teacherImg={data.teacherImg}

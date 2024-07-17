@@ -11,7 +11,7 @@
 }
 
 .course-container .course-details .course-name {
-    @apply font-bold lg:text-4xl md:text-2xl;
+    @apply font-bold lg:text-4xl md:text-2xl dark:text-gray-100;
 }
 
 .course-container .course-details .course-details-cards {
@@ -19,11 +19,11 @@
 }
 
 .course-container .course-details .course-details-cards .course-details-card {
-    @apply flex flex-col items-center bg-gray-100 px-[10%] py-[3%] rounded-2xl gap-2;
+    @apply flex flex-col items-center bg-gray-100 dark:bg-slate-800 px-[10%] py-[3%] rounded-2xl gap-2;
 }
 
 .course-container .course-details .course-details-cards .course-details-card .icon {
-    @apply bg-white p-2 rounded-full text-blue-600
+    @apply bg-white dark:bg-slate-900 p-2 rounded-full text-blue-600 animate-pulse
 }
 
 .course-container .course-details .course-details-cards .course-details-card .title {
@@ -31,7 +31,7 @@
 }
 
 .course-container .course-details .course-details-cards .course-details-card .count {
-    @apply font-bold;
+    @apply font-bold dark:text-gray-100;
 }
 
 .course-container .course-details .headlines-title {
