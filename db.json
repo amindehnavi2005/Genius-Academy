@@ -22,53 +22,63 @@
   "courses": [
     {
       "id": "1",
-      "courseImg": "/public/course01.jpg",
+      "courseImg": "/course01.jpg",
+      "courseStatus": true,
       "courseName": "دوره پروژه محور React و Next",
       "courseTag": "فرانت اند",
       "courseSeasonCount": 5,
       "courseTime": 25,
       "courseTeacher": "جلال بهرامی راد",
-      "coursePrice": "1,079,000"
+      "coursePrice": "1,079,000",
+      "teacherImg": "/teacher.jpeg"
     },
     {
       "id": "2",
-      "courseImg": "/public/course02.webp",
+      "courseImg": "/course02.webp",
+      "courseStatus": true,
       "courseName": "دوره پروژه محور React",
       "courseTag": "فرانت اند",
-      "courseSeasonCount": 5,
-      "courseTime": 25,
-      "courseTeacher": "جلال بهرامی راد",
-      "coursePrice": "1,079,000"
+      "courseSeasonCount": 26,
+      "courseTime": 99,
+      "courseTeacher": "محمد امین سعیدی راد",
+      "coursePrice": "4,000,000",
+      "teacherImg": "/teacher-amin-saeidi.png"
     },
     {
       "id": "3",
-      "courseImg": "/public/course01.jpg",
-      "courseName": "دوره پروژه محور React و Next",
-      "courseTag": "فرانت اند",
-      "courseSeasonCount": 5,
-      "courseTime": 25,
-      "courseTeacher": "جلال بهرامی راد",
-      "coursePrice": "1,079,000"
+      "courseImg": "/course03.webp",
+      "courseStatus": true,
+      "courseName": "آموزش جنگو به صورت پروژه محور",
+      "courseTag": "بک اند",
+      "courseSeasonCount": 16,
+      "courseTime": 47,
+      "courseTeacher": "رضا دولتی",
+      "coursePrice": "1,750,000",
+      "teacherImg": "/teacher-reza-dolati.png"
     },
     {
       "id": "4",
-      "courseImg": "/public/course01.jpg",
-      "courseName": "دوره پروژه محور React و Next",
-      "courseTag": "فرانت اند",
-      "courseSeasonCount": 5,
-      "courseTime": 25,
-      "courseTeacher": "جلال بهرامی راد",
-      "coursePrice": "1,079,000"
+      "courseImg": "/course04.webp",
+      "courseStatus": true,
+      "courseName": "آموزش پایتون رایگان مقدماتی تا پیشرفته",
+      "courseTag": "بک اند",
+      "courseSeasonCount": 10,
+      "courseTime": 77,
+      "courseTeacher": "رضا دولتی",
+      "coursePrice": "0",
+      "teacherImg": "/teacher-reza-dolati.png"
     },
     {
       "id": "5",
-      "courseImg": "/public/course01.jpg",
-      "courseName": "دوره پروژه محور React و Next",
+      "courseImg": "/course05.webp",
+      "courseStatus": true,
+      "courseName": "پیاده سازی داشبورد های حرفه ای با CSS و JS",
       "courseTag": "فرانت اند",
-      "courseSeasonCount": 5,
-      "courseTime": 25,
-      "courseTeacher": "جلال بهرامی راد",
-      "coursePrice": "1,079,000"
+      "courseSeasonCount": 10,
+      "courseTime": 21,
+      "courseTeacher": "مهرشاد براتی",
+      "coursePrice": "700,000",
+      "teacherImg": "/teacher-mehrshad-barati.png"
     }
   ]
 }

@@ -53,7 +53,7 @@ function SignIn() {
             array => {
                 array.filter(
                     (data) => {
-                        if (data.userEmail == userEmail) {
+                        if (data.userEmail == userEmail && data.userPassword == userPassword) {
                             console.log(data);
                             localStorage.setItem("userInfo", JSON.stringify(data));
                             localStorage.setItem("isSignIn", true);
@@ -62,7 +62,6 @@ function SignIn() {
                 );
             }
         )
-
     }
 
     return (

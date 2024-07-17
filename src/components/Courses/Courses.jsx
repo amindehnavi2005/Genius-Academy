@@ -1,24 +1,22 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Courses.css"
 import Course from './Course'
 import Label from '../Label/Label'
+import { Link } from 'react-router-dom';
 
 function Courses() {
 
-    let courseList;
+    const [datas, setDatas] = useState([]);
+
     useEffect(() => {
         fetch("http://localhost:3000/courses",
             { method: "GET", },
         ).then(
             (response) => response.json()
         ).then(
-            data => {
-                courseList = data;
-            }
+            data => setDatas(data)
         );
     }, []);
-
-    console.log("Course List : " + courseList);
 
     return (
         <section className="courses-container">
@@ -31,15 +29,31 @@ function Courses() {
                     </svg>}
                     title={"آخرین دوره های"}
                     subtitle={"منتشر شده"} />
-                <button className="show-all-courses-btn">
-                    مشاهده همه
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 19.5-15-15m0 0v11.25m0-11.25h11.25" />
-                    </svg>
-                </button>
+                <Link to={"/courses"}>
+                    <button className="show-all-courses-btn">
+                        مشاهده همه
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 19.5-15-15m0 0v11.25m0-11.25h11.25" />
+                        </svg>
+                    </button>
+                </Link>
             </header>
             <main className="courses-list">
-                {/* {courseList.map((course) => <Course label={"فرانت اند"} />)} */}
+                {
+                    datas.map(
+                        (data) => <Course
+                            img={data.courseImg}
+                            status={data}
+                            name={data.courseName}
+                            tag={data.courseTag}
+                            seasonCount={data.courseSeasonCount}
+                            time={data.courseTime}
+                            teacher={data.courseTeacher}
+                            teacherImg={data.teacherImg}
+                            price={data.coursePrice}
+                        />
+                    )
+                }
             </main>
         </section>
     )

@@ -56,7 +56,7 @@
 }
 
 .course-item .teacher-details {
-    @apply flex justify-between items-center;
+    @apply flex justify-between items-end;
 }
 
 .course-item .teacher-details img {
