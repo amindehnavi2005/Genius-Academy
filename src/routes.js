@@ -3,6 +3,7 @@ import Home from "./client/Home";
 import Courses from "./client/Courses";
 import SignIn from "./components/SignIn/SignIn";
 import Course from "./client/Course";
+import UserBasket from "./client/UserBasket";
 
 const router = createBrowserRouter(
     [
@@ -22,6 +23,10 @@ const router = createBrowserRouter(
             path: "/courses/course/:id",
             element: <Course />
         },
+        {
+            path: "/user-basket",
+            element: <UserBasket />
+        }
     ]
 )
 
