@@ -7,12 +7,13 @@ import CourseDetailsCard from '../components/Courses/CourseDetailsCard';
 function Course() {
 
     const id = useParams();
-    let [datas, setDatas] = useState([]);
+    let datas = useState([]);
     datas = JSON.parse(localStorage.getItem("courses"));
     const newData = datas.filter((data) => {
         return data.id == id.id;
     });
 
+    const [partStatus, setPartStatus] = useState(false);
 
     return (
         <main className='course-container'>
@@ -70,29 +71,51 @@ function Course() {
                     </p>
                     {newData[0].courseHeadlines.map((headlines) => (
                         <>
-                            <button className='headlines-dropdown'>
+                            <button className='headlines-dropdown' onClick={() => { setPartStatus(!partStatus) }}>
                                 <section className='headline-details'>
                                     <p>{headlines.headlineId}</p>
                                     <p>{headlines.headlineName}</p>
                                 </section>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                                </svg>
+                                {
+                                    partStatus
+                                        ?
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                                        </svg>
+                                        :
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                        </svg>
+                                }
                             </button>
-                            <section className="headline-parts">
-                                {headlines.headlineParts.map((part) => (
-                                    <section className="part-container">
-                                        <section className="part-details">
-                                            <p>{part.partId}</p>
-                                            <p>{part.partName}</p>
-                                        </section>
-                                        <section className="part-time">
-                                            <p>{part.partTime}</p>
-                                            <p>{part.partName}</p>
-                                        </section>
+                            {
+                                partStatus ? (
+                                    <section className="headline-parts">
+                                        {headlines.headlineParts.map((part) => (
+                                            <section className="part-container">
+                                                <section className="part-details">
+                                                    <p>{part.partId}</p>
+                                                    <p>{part.partName}</p>
+                                                </section>
+                                                <section className="part-time">
+                                                    <p>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                                        </svg>
+                                                        {part.partTime}
+                                                    </p>
+                                                    <button className='show-part-btn'>
+                                                        مشاهده
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                                            <path fill-rule="evenodd" d="M5.25 6.31v9.44a.75.75 0 0 1-1.5 0V4.5a.75.75 0 0 1 .75-.75h11.25a.75.75 0 0 1 0 1.5H6.31l13.72 13.72a.75.75 0 1 1-1.06 1.06L5.25 6.31Z" clip-rule="evenodd" />
+                                                        </svg>
+                                                    </button>
+                                                </section>
+                                            </section>
+                                        ))}
                                     </section>
-                                ))}
-                            </section>
+                                ) : null
+                            }
                         </>
                     ))}
                 </section>
