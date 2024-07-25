@@ -1,0 +1,64 @@
+.user-basket {
+    @apply p-28;
+}
+
+.user-basket .user-basket-card {
+    @apply flex my-12 bg-gray-100 dark:bg-slate-800 dark:text-gray-100 rounded-xl p-10 gap-5
+}
+
+.user-basket .user-basket-card .image-pane {
+    @apply flex-1 text-center relative
+}
+
+.user-basket .user-basket-card .image-pane img {
+    @apply rounded-xl lg:h-full md:h-auto
+}
+
+.user-basket .user-basket-card .image-pane .remove-item {
+    @apply bg-red-600 rounded-full p-3 text-white relative bottom-[-5%]
+}
+
+.user-basket .user-basket-card .details-pane {
+    @apply flex-[2]
+}
+
+.user-basket .user-basket-card .details-pane .completed {
+    @apply text-green-600 font-bold
+}
+
+.user-basket .user-basket-card .details-pane .title {
+    @apply font-black text-xl
+}
+
+.user-basket .user-basket-card .details-pane .time-container {
+    @apply flex w-[50%] justify-around items-center
+}
+
+.user-basket .user-basket-card .details-pane hr {
+    @apply my-5
+}
+
+
+.user-basket .user-basket-card .details-pane .time-container p {
+    @apply flex gap-2 my-5 text-gray-700 dark:text-blue-400
+}
+
+.user-basket .user-basket-card .details-pane .teacher-container {
+    @apply flex justify-between items-center
+}
+
+.user-basket .user-basket-card .details-pane .teacher-container img {
+    @apply rounded-full h-16
+}
+
+.user-basket .user-basket-card .details-pane .teacher-container .free-course {
+    @apply font-bold text-blue-600 text-xl
+}
+
+.user-basket .user-basket-card .details-pane .teacher-container .price-course {
+    @apply font-bold text-xl
+}
+
+.user-basket .add-courses-to-panel{
+    @apply bg-blue-600 text-gray-100 p-5 px-10 rounded-full w-full my-10 transition-all duration-150 hover:bg-blue-400 font-black text-xl
+}

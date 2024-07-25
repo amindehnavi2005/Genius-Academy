@@ -4,6 +4,7 @@ import Header from '../components/Header/Header';
 import "./Course.css"
 import CourseDetailsCard from '../components/Courses/CourseDetailsCard';
 import Footer from '../components/Footer/Footer';
+import UserBasket from './UserBasket';
 
 function Course() {
 
@@ -15,6 +16,35 @@ function Course() {
     });
 
     const [partStatus, setPartStatus] = useState(false);
+    const [userCourses, setUserCourses] = useState(localStorage.getItem("userCourses") ? JSON.parse(localStorage.getItem("userCourses")) : []);
+
+    let userBasket = [];
+
+    const addCourseToUserBasket = (data) => {
+
+        let checkUserCourses = userCourses.find(item => item.id == data.id);
+        if (checkUserCourses !== undefined) {
+            alert("دوره مد نظر شما در پنل کاربریتان موجود است!");
+        } else {
+            if (localStorage.getItem("userBasket")) {
+                userBasket = JSON.parse(localStorage.getItem("userBasket"));
+
+                let object = userBasket.find(item => item.id == data.id);
+
+
+                if (object == undefined) {
+                    userBasket.push(data);
+                    return localStorage.setItem("userBasket", JSON.stringify(userBasket));
+                } else {
+                    return alert("دوره قبلا به سبد خرید اضافه شده است!!!!");
+                }
+            } else {
+                userBasket.push(data);
+                localStorage.setItem("userBasket", JSON.stringify(userBasket));
+            }
+        }
+
+    }
 
     return (
         <main className='course-container'>
@@ -77,7 +107,7 @@ function Course() {
                         />
                     )}
                 </section>
-                <button className="add-to-user-basket-btn">ثبت نام در دوره</button>
+                <button className="add-to-user-basket-btn" onClick={() => addCourseToUserBasket(newData[0])}>ثبت نام در دوره</button>
                 <section className="headlines">
                     <p className='headlines-title'>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
