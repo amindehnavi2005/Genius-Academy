@@ -12,6 +12,7 @@ function SignIn() {
     const [userEmail, setUserEmail] = useState("");
     const [userPassword, setUserPassword] = useState("");
 
+
     const userSignIn = () => {
 
         let userInfo = {
@@ -80,7 +81,7 @@ function SignIn() {
                         ) : null
                     }
                     <input className='input' type="text" value={userEmail} onChange={(event) => setUserEmail(event.target.value)} placeholder='ایمیل' />
-                    <input className='input' type="text" value={userPassword} onChange={(event) => setUserPassword(event.target.value)} placeholder='رمز عبور' />
+                    <input className='input' type="password" value={userPassword} onChange={(event) => setUserPassword(event.target.value)} placeholder='رمز عبور' />
                     {
                         <p>
                             {pageStatus ? (<span>هنوز ثبت نام نکرده ام : </span>) : (<span> قبلا ثبت نام کرده ام : </span>)}

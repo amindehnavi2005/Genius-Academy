@@ -8,9 +8,20 @@ import Footer from '../components/Footer/Footer';
 
 function Home() {
 
+    const userInfo = JSON.parse(localStorage.getItem("userInfo")) ? JSON.parse(localStorage.getItem("userInfo")) : undefined;
+
     useEffect(() => {
         if (!localStorage.getItem("isSignIn")) {
             localStorage.setItem("isSignIn", false);
+        }
+        if (userInfo) {
+            fetch(`http://localhost:3000/users?id=${userInfo.id}`, {
+                method: "GET",
+            }).then(
+                response => response.json()
+            ).then(
+                data => localStorage.getItem("userCourses") ? null : localStorage.setItem("userCourses", JSON.stringify(data[0].userCourses))
+            );
         }
     }, [])
 

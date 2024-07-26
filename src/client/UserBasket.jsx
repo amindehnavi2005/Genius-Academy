@@ -8,23 +8,43 @@ function UserBasket() {
 
     const [userBasket, setUserBasket] = useState(localStorage.getItem("userBasket") ? JSON.parse(localStorage.getItem("userBasket")) : []);
     const userCourses = localStorage.getItem("userCourses") ? JSON.parse(localStorage.getItem("userCourses")) : [];
-
+    const userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
     useEffect(() => {
         localStorage.setItem("userBasket", JSON.stringify(userBasket));
-    })
-
+    });
 
     const removeItemFromUserBasket = (id) => {
         setUserBasket(userBasket.filter((course) => course.id !== id));
     }
 
     const addToUserCourses = (courses) => {
+
         courses.map((course) => userCourses.push(course));
-        console.log(userCourses);
-        localStorage.setItem("userCourses", JSON.stringify(userCourses))
-        setUserBasket([]);
+
+        fetch(`http://localhost:3000/users/${userInfo.id}`, {
+            method: "PUT",
+            body: JSON.stringify(
+                {
+                    ...userInfo,
+                    userCourses
+                }
+            ),
+        }).then(
+            (response) => {
+                if (response.status == 200 || response.status == 201) {
+                    localStorage.setItem("userCourses", JSON.stringify(userCourses));
+                    setUserBasket([]);
+                    console.log("User Courses => ", userCourses);
+                    console.log("User Info => ", userInfo);
+                } else {
+                    console.log(userInfo.userCourses);
+                    alert("مشکلی به وجود آمده است.");
+                }
+            }
+        );
     }
+
 
     return (
         <main>
@@ -96,6 +116,7 @@ function UserBasket() {
                         </button>
                         : null
                 }
+
             </section>
             <Footer />
         </main >

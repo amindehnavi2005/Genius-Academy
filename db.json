@@ -4,19 +4,203 @@
       "id": "a146",
       "username": "احمد",
       "userEmail": "ahmad@gmail.com",
-      "userPassword": "123456789"
+      "userPassword": "123456789",
+      "userCourses": []
     },
     {
       "id": "9f74",
       "username": "عرفان دهنوی",
       "userEmail": "erfan@gmail.com",
-      "userPassword": "123456789"
+      "userPassword": "123456789",
+      "userCourses": []
     },
     {
       "id": "499f",
       "username": "امین دهنوی",
       "userEmail": "amin1384dehnavi@gmail.com",
-      "userPassword": "a09013260388"
+      "userPassword": "a09013260388",
+      "userCourses": [
+        {
+          "id": "1",
+          "courseImg": "/course01.jpg",
+          "courseStatus": true,
+          "courseName": "دوره پروژه محور React و Next",
+          "courseTag": "فرانت اند",
+          "courseHeadlines": [
+            {
+              "headlineId": 1,
+              "headlineName": "معرفی",
+              "headlineParts": [
+                {
+                  "partId": 1,
+                  "partName": "معرفی دوره",
+                  "partTime": "11:35"
+                },
+                {
+                  "partId": 2,
+                  "partName": "پیش نیاز مشاهده این دوره",
+                  "partTime": "11:35"
+                },
+                {
+                  "partId": 3,
+                  "partName": "چرا باید این دوره را مشاهده کنیم؟",
+                  "partTime": "05:55"
+                },
+                {
+                  "partId": 4,
+                  "partName": "در این پروژه از چه تکنولوژی هایی استفاده می‌شود؟",
+                  "partTime": "07:13"
+                }
+              ]
+            },
+            {
+              "headlineId": 2,
+              "headlineName": "مفاهیم ابتدایی پروژه",
+              "headlineParts": [
+                {
+                  "partId": 1,
+                  "partName": "نصب پروژه",
+                  "partTime": "04:35"
+                },
+                {
+                  "partId": 2,
+                  "partName": "نصب کتابخانه های مورد نیاز پروژه",
+                  "partTime": "11:00"
+                },
+                {
+                  "partId": 3,
+                  "partName": "پیاده سازی صفحه اصلی پروژه",
+                  "partTime": "17:51"
+                }
+              ]
+            }
+          ],
+          "courseTime": 25,
+          "courseTeacher": "جلال بهرامی راد",
+          "coursePrice": "1,079,000",
+          "teacherImg": "/teacher.jpeg"
+        },
+        {
+          "id": "2",
+          "courseImg": "/course02.webp",
+          "courseStatus": true,
+          "courseName": "دوره پروژه محور React",
+          "courseTag": "فرانت اند",
+          "courseHeadlines": [
+            {
+              "headlineId": 1,
+              "headlineName": "معرفی",
+              "headlineParts": [
+                {
+                  "partId": 1,
+                  "partName": "معرفی دوره",
+                  "partTime": "11:35"
+                },
+                {
+                  "partId": 2,
+                  "partName": "پیش نیاز مشاهده این دوره",
+                  "partTime": "11:35"
+                },
+                {
+                  "partId": 3,
+                  "partName": "چرا باید این دوره را مشاهده کنیم؟",
+                  "partTime": "05:55"
+                },
+                {
+                  "partId": 4,
+                  "partName": "در این پروژه از چه تکنولوژی هایی استفاده می‌شود؟",
+                  "partTime": "07:13"
+                }
+              ]
+            },
+            {
+              "headlineId": 2,
+              "headlineName": "مفاهیم ابتدایی پروژه",
+              "headlineParts": [
+                {
+                  "partId": 1,
+                  "partName": "نصب پروژه",
+                  "partTime": "04:35"
+                },
+                {
+                  "partId": 2,
+                  "partName": "نصب کتابخانه های مورد نیاز پروژه",
+                  "partTime": "11:00"
+                },
+                {
+                  "partId": 3,
+                  "partName": "پیاده سازی صفحه اصلی پروژه",
+                  "partTime": "17:51"
+                }
+              ]
+            }
+          ],
+          "courseTime": 99,
+          "courseTeacher": "محمد امین سعیدی راد",
+          "coursePrice": "4,000,000",
+          "teacherImg": "/teacher-amin-saeidi.png"
+        },
+        {
+          "id": "3",
+          "courseImg": "/course03.webp",
+          "courseStatus": true,
+          "courseName": "آموزش جنگو به صورت پروژه محور",
+          "courseTag": "بک اند",
+          "courseHeadlines": [
+            {
+              "headlineId": 1,
+              "headlineName": "معرفی",
+              "headlineParts": [
+                {
+                  "partId": 1,
+                  "partName": "معرفی دوره",
+                  "partTime": "11:35"
+                },
+                {
+                  "partId": 2,
+                  "partName": "پیش نیاز مشاهده این دوره",
+                  "partTime": "11:35"
+                },
+                {
+                  "partId": 3,
+                  "partName": "چرا باید این دوره را مشاهده کنیم؟",
+                  "partTime": "05:55"
+                },
+                {
+                  "partId": 4,
+                  "partName": "در این پروژه از چه تکنولوژی هایی استفاده می‌شود؟",
+                  "partTime": "07:13"
+                }
+              ]
+            },
+            {
+              "headlineId": 2,
+              "headlineName": "مفاهیم ابتدایی پروژه",
+              "headlineParts": [
+                {
+                  "partId": 1,
+                  "partName": "نصب پروژه",
+                  "partTime": "04:35"
+                },
+                {
+                  "partId": 2,
+                  "partName": "نصب کتابخانه های مورد نیاز پروژه",
+                  "partTime": "11:00"
+                },
+                {
+                  "partId": 3,
+                  "partName": "پیاده سازی صفحه اصلی پروژه",
+                  "partTime": "17:51"
+                }
+              ]
+            }
+          ],
+          "courseTime": 47,
+          "courseTeacher": "رضا دولتی",
+          "coursePrice": "1,750,000",
+          "teacherImg": "/teacher-reza-dolati.png"
+        }
+      ]
     }
   ],
   "courses": [
