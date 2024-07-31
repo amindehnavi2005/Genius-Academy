@@ -4,6 +4,7 @@ import Courses from "./client/Courses";
 import SignIn from "./components/SignIn/SignIn";
 import Course from "./client/Course";
 import UserBasket from "./client/UserBasket";
+import UserPanel from "./client/UserPanel";
 
 const router = createBrowserRouter(
     [
@@ -26,6 +27,10 @@ const router = createBrowserRouter(
         {
             path: "/user-basket",
             element: <UserBasket />
+        },
+        {
+            path: "/user-panel",
+            element: <UserPanel />
         }
     ]
 )
