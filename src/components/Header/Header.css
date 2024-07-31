@@ -55,6 +55,6 @@
     @apply my-4 transition-all duration-150 hover:text-blue-600;
 }
 
-.header .left-pane .profile .profile-menu .exit {
-    @apply text-red-500 hover:text-red-600;
+.header .left-pane .profile .profile-menu .exit button {
+    @apply  text-red-500 hover:text-red-600 flex gap-2;
 }
