@@ -63,7 +63,7 @@ function UserPanel() {
                     </section>
                 ))}
             </section>
-            <button className='log-out-account-btn'>خروج از حساب کاربری</button>
+            <button className='log-out-account-btn' onClick={() => { localStorage.removeItem("userInfo") }}>خروج از حساب کاربری</button>
         </main>
     )
 }

@@ -26,7 +26,7 @@
     @apply bg-slate-100 p-2 rounded-full mobile:hidden lg:block dark:bg-slate-700;
 }
 
-.header .left-pane .user-basket{
+.header .left-pane .user-basket {
     @apply block
 }
 
@@ -56,5 +56,5 @@
 }
 
 .header .left-pane .profile .profile-menu .exit button {
-    @apply  text-red-500 hover:text-red-600 flex gap-2;
+    @apply text-red-500 hover:text-red-600 flex gap-2;
 }

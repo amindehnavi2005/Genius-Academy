@@ -43,5 +43,5 @@
 }
 
 .user-panel .log-out-account-btn {
-    @apply bg-red-600 text-center mb-16 p-5 rounded-full transition-all duration-150 hover:bg-red-800
+    @apply bg-red-600 text-center mb-16 p-5 rounded-full transition-all duration-150 hover:bg-red-800 text-gray-100
 }
